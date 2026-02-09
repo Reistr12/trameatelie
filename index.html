@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Trame Ateliê | Crochê Artesanal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Peças de crochê artesanais feitas com carinho e personalidade. Descubra peças únicas feitas especialmente para você.">
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lora:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header Elegante e Discreto -->
+  <header class="header">
+    <div class="header-content">
+      <div class="logo-container">
+        <div class="logo-circle">
+          <img src="img/logo.png" alt="Logo Trame Ateliê" class="logo-img">
+          <div class="logo-glow"></div>
+        </div>
+        <div class="brand-identity">
+          <h1 class="brand-name">Trame Ateliê</h1>
+          <div class="brand-line"></div>
+          <p class="brand-subtitle">Artesanato com alma</p>
+        </div>
+      </div>
+      
+      <nav class="main-nav">
+        <div class="nav-container">
+          <button class="nav-item active" onclick="mostrarAba('sobre')">
+            <span class="nav-label">Quem somos</span>
+            <div class="nav-dot"></div>
+          </button>
+          <div class="nav-divider">•</div>
+          <button class="nav-item" onclick="mostrarAba('contato')">
+            <span class="nav-label">Contato</span>
+            <div class="nav-dot"></div>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main class="main-content">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h2 class="hero-title">Cada ponto, uma história</h2>
+          <p class="hero-subtitle">Peças de crochê únicas, feitas à mão com dedicação e personalidade</p>
+          <div class="hero-decoration">
+            <div class="yarn-ball">
+              <i class="fas fa-circle"></i>
+            </div>
+            <div class="yarn-thread"></div>
+            <div class="yarn-ball">
+              <i class="fas fa-circle"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="aba ativa">
+      <div class="container">
+        <div class="section-intro">
+          <div class="intro-decoration">
+            <div class="needle-icon">
+              <i class="fas fa-crosshairs"></i>
+            </div>
+          </div>
+          <h2 class="section-title">A arte do cuidado</h2>
+          <p class="section-subtitle">Em cada detalhe, uma expressão de carinho</p>
+        </div>
+        
+        <div class="about-content">
+          <div class="about-text-block">
+            <p class="about-lead">
+              No <span class="highlight">Trame Ateliê</span>, o crochê vai além da técnica. É uma forma de expressão 
+              que transforma fios em peças que contam histórias, aquecem corpos e encantam olhares.
+            </p>
+            
+            <div class="about-features">
+              <div class="feature">
+                <div class="feature-number">01</div>
+                <div class="feature-content">
+                  <h3>Feito à mão, com alma</h3>
+                  <p>Cada ponto é cuidadosamente trabalhado, garantindo exclusividade e qualidade em todas as peças.</p>
+                </div>
+              </div>
+              
+              <div class="feature">
+                <div class="feature-number">02</div>
+                <div class="feature-content">
+                  <h3>Personalizado para você</h3>
+                  <p>Criamos peças que refletem sua personalidade, estilo e momento de vida.</p>
+                </div>
+              </div>
+              
+              <div class="feature">
+                <div class="feature-number">03</div>
+                <div class="feature-content">
+                  <h3>Materiais selecionados</h3>
+                  <p>Trabalhamos com fios de alta qualidade, garantindo maciez, durabilidade e conforto.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="about-quote">
+              <div class="quote-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <blockquote>
+                "Não fazemos apenas peças de crochê. Criamos extensões da personalidade de quem as usa."
+              </blockquote>
+            </div>
+          </div>
+          
+          <div class="about-visual">
+            <div class="visual-frame">
+              <div class="texture-pattern"></div>
+              <div class="visual-content">
+                <div class="stitch-pattern">
+                  <div class="stitch"></div>
+                  <div class="stitch"></div>
+                  <div class="stitch"></div>
+                  <div class="stitch"></div>
+                </div>
+                <p class="visual-text">Artesanato que transforma</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="aba">
+      <div class="container">
+        <div class="section-intro">
+          <h2 class="section-title">Vamos criar juntas?</h2>
+          <p class="section-subtitle">Entre em contato e converse diretamente com a artesã</p>
+        </div>
+        
+        <div class="contact-content">
+          <div class="contact-intro">
+            <div class="contact-icon-large">
+              <i class="fas fa-hands-helping"></i>
+            </div>
+            <p>
+              Tem uma ideia em mente ou quer adaptar alguma peça?<br>
+              <span class="contact-highlight">Vamos conversar sobre seu projeto!</span>
+            </p>
+          </div>
+          
+          <div class="contact-options">
+            <a href="https://bit.ly/4rgrule" target="_blank" class="contact-option primary">
+              <div class="option-icon">
+                <div class="icon-circle whatsapp-bg">
+                  <i class="fab fa-whatsapp"></i>
+                </div>
+              </div>
+              <div class="option-content">
+                <h3>WhatsApp Direto</h3>
+                <p>Conversa rápida e atendimento personalizado</p>
+                <div class="option-meta">
+                  <span class="meta-item">
+                    <i class="fas fa-clock"></i> Resposta rápida
+                  </span>
+                  <span class="meta-item">
+                    <i class="fas fa-comments"></i> Tire suas dúvidas
+                  </span>
+                </div>
+              </div>
+              <div class="option-action">
+                <span class="action-text">Conversar</span>
+                <i class="fas fa-arrow-right"></i>
+              </div>
+            </a>
+            
+            <a href="https://www.instagram.com/trameatelie__/" target="_blank" class="contact-option secondary">
+              <div class="option-icon">
+                <div class="icon-circle instagram-bg">
+                  <i class="fab fa-instagram"></i>
+                </div>
+              </div>
+              <div class="option-content">
+                <h3>Instagram</h3>
+                <p>@trameatelie__</p>
+                <div class="option-meta">
+                  <span class="meta-item">
+                    <i class="fas fa-images"></i> Veja nossas peças
+                  </span>
+                  <span class="meta-item">
+                    <i class="fas fa-heart"></i> Inspirações diárias
+                  </span>
+                </div>
+              </div>
+              <div class="option-action">
+                <span class="action-text">Seguir</span>
+                <i class="fas fa-arrow-right"></i>
+              </div>
+            </a>
+          </div>
+          
+          <div class="contact-note">
+            <div class="note-icon">
+              <i class="fas fa-star"></i>
+            </div>
+            <p><strong>Encomendas personalizadas:</strong> Traga sua ideia e criaremos juntas uma peça exclusiva para você.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="logo-mini">
+              <i class="fas fa-heart"></i>
+            </div>
+            <div class="footer-brand-text">
+              <h3>Trame Ateliê</h3>
+              <p>Artesanato com propósito</p>
+            </div>
+          </div>
+          <p class="footer-description">
+            Peças feitas à mão com carinho, dedicadas a quem valoriza o singular.
+          </p>
+        </div>
+        
+        <div class="footer-divider"></div>
+        
+        <div class="footer-info">
+          <div class="info-section">
+            <h4>Feito com</h4>
+            <ul class="info-list">
+              <li><i class="fas fa-heart"></i> Dedicação</li>
+              <li><i class="fas fa-hand-sparkles"></i> Cuidado</li>
+              <li><i class="fas fa-clock"></i> Tempo</li>
+            </ul>
+          </div>
+          
+          <div class="info-section">
+            <h4>Conecte-se</h4>
+            <div class="social-links">
+              <a href="https://www.instagram.com/trameatelie__/" target="_blank" class="social-link">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://bit.ly/4rgrule" target="_blank" class="social-link">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="copyright">
+          <p>© <span id="current-year">2024</span> Trame Ateliê — Todo feito à mão</p>
+        </div>
+        <div class="footer-quote">
+          <p>"O verdadeiro luxo está no singular."</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Elementos decorativos -->
+  <div class="floating-elements">
+    <div class="floating-element element-1"></div>
+    <div class="floating-element element-2"></div>
+    <div class="floating-element element-3"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
