@@ -1,4 +1,92 @@
 // script.js
+
+// Dados das peças
+const pecasData = {
+  'top-genipabu': {
+    nome: 'Top Genipabu',
+    imagem: 'img/coleções/made-in-brasil/Top-Genipabu.jpeg',
+    precos: [
+      { tamanho: 'PP', valor: 69.90 },
+      { tamanho: 'P', valor: 75.90 },
+      { tamanho: 'M', valor: 80.00 },
+      { tamanho: 'G', valor: 84.90 },
+      { tamanho: 'GG', valor: 90.00 }
+    ]
+  },
+  'shortinho-hexa': {
+    nome: 'Shortinho Hexa',
+    imagem: 'img/coleções/made-in-brasil/Shortinho-Hexa.jpeg',
+    precos: [
+      { tamanho: 'P', valor: 80.00 },
+      { tamanho: 'M', valor: 89.90 },
+      { tamanho: 'G', valor: 95.90 },
+      { tamanho: 'GG', valor: 102.00 }
+    ]
+  },
+  'saia-dona-maria': {
+    nome: 'Saia Dona Maria',
+    imagem: 'img/coleções/made-in-brasil/Saia-Dona-Maria.jpeg',
+    precos: [
+      { tamanho: 'PP', valor: 80.00 },
+      { tamanho: 'P', valor: 84.90 },
+      { tamanho: 'M', valor: 92.90 },
+      { tamanho: 'G', valor: 97.90 },
+      { tamanho: 'GG', valor: 110.00 }
+    ]
+  },
+  'bandana-xodo': {
+    nome: 'Bandana Xodó',
+    imagem: 'img/coleções/made-in-brasil/Bandana-Xodó.jpeg',
+    precos: [
+      { tamanho: 'P', valor: 65.90 },
+      { tamanho: 'M', valor: 70.00 },
+      { tamanho: 'G', valor: 76.90 },
+      { tamanho: 'GG', valor: 87.90 }
+    ]
+  },
+  'faixa-caju': {
+    nome: 'Faixa Caju',
+    imagem: 'img/coleções/made-in-brasil/Faixa-Caju.jpeg',
+    precos: [
+      { tamanho: 'Único', valor: 45.00 }
+    ]
+  }
+};
+
+// Função para abrir modal
+window.abrirModal = function(pecaId) {
+  const peca = pecasData[pecaId];
+  if (!peca) return;
+  
+  const modal = document.getElementById('modal-peca');
+  const modalImg = document.getElementById('modal-img');
+  const modalTitulo = document.getElementById('modal-titulo');
+  const modalTabelaPrecos = document.getElementById('modal-tabela-precos');
+  
+  modalImg.src = peca.imagem;
+  modalImg.alt = peca.nome;
+  modalTitulo.textContent = peca.nome;
+  
+  modalTabelaPrecos.innerHTML = peca.precos.map(item => `
+    <div class="preco-item">
+      <span class="preco-tamanho">${item.tamanho}</span>
+      <span class="preco-valor">R$ ${item.valor.toFixed(2).replace('.', ',')}</span>
+    </div>
+  `).join('');
+  
+  modal.classList.add('ativo');
+  document.body.style.overflow = 'hidden';
+};
+
+// Função para fechar modal
+window.fecharModal = function(event) {
+  if (!event || event.target.id === 'modal-peca' || event.target.closest('.modal-close')) {
+    const modal = document.getElementById('modal-peca');
+    modal.classList.remove('ativo');
+    document.body.style.overflow = '';
+  }
+};
+
 document.addEventListener('DOMContentLoaded', function() {
   // Sistema de navegação suave
   const abas = document.querySelectorAll('.aba');

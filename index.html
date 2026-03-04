@@ -35,6 +35,11 @@
             <div class="nav-dot"></div>
           </button>
           <div class="nav-divider">•</div>
+          <button class="nav-item" onclick="mostrarAba('colecoes')">
+            <span class="nav-label">Coleções</span>
+            <div class="nav-dot"></div>
+          </button>
+          <div class="nav-divider">•</div>
           <button class="nav-item" onclick="mostrarAba('contato')">
             <span class="nav-label">Contato</span>
             <div class="nav-dot"></div>
@@ -69,11 +74,6 @@
     <section id="sobre" class="aba ativa">
       <div class="container">
         <div class="section-intro">
-          <div class="intro-decoration">
-            <div class="needle-icon">
-              <i class="fas fa-crosshairs"></i>
-            </div>
-          </div>
           <h2 class="section-title">A arte do cuidado</h2>
           <p class="section-subtitle">Em cada detalhe, uma expressão de carinho</p>
         </div>
@@ -125,13 +125,109 @@
             <div class="visual-frame">
               <div class="texture-pattern"></div>
               <div class="visual-content">
-                <div class="stitch-pattern">
-                  <div class="stitch"></div>
-                  <div class="stitch"></div>
-                  <div class="stitch"></div>
-                  <div class="stitch"></div>
+                <img src="img/coleções/made-in-brasil/prova social.jpeg" alt="Cliente satisfeita" class="prova-social-img">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Coleções -->
+    <section id="colecoes" class="aba">
+      <div class="container">
+        <div class="section-intro">
+          <h2 class="section-title">Nossas Coleções</h2>
+          <p class="section-subtitle">Peças exclusivas que contam histórias</p>
+        </div>
+        
+        <div class="colecao-destaque">
+          <div class="colecao-header">
+            <div class="colecao-badge">
+              <i class="fas fa-star"></i>
+              <span>Lançamento</span>
+            </div>
+            <h3 class="colecao-titulo">Made in Brasil</h3>
+            <p class="colecao-subtitulo">Celebrando o clima e a paixão brasileira</p>
+          </div>
+          
+          <div class="colecao-content">
+            <div class="colecao-info">
+              <div class="info-block">
+                <div class="info-icon">
+                  <i class="fas fa-futbol"></i>
                 </div>
-                <p class="visual-text">Artesanato que transforma</p>
+                <div class="info-text">
+                  <h4>Copa do Mundo 2026</h4>
+                  <p>Peças especiais inspiradas na maior festa do futebol mundial</p>
+                </div>
+              </div>
+              
+              <div class="info-block">
+                <div class="info-icon">
+                  <i class="fas fa-sun"></i>
+                </div>
+                <div class="info-text">
+                  <h4>Clima Brasileiro</h4>
+                  <p>Crochês leves e coloridos, perfeitos para o nosso verão</p>
+                </div>
+              </div>
+              
+              <div class="info-block">
+                <div class="info-icon">
+                  <i class="fas fa-heart"></i>
+                </div>
+                <div class="info-text">
+                  <h4>Cores da Bandeira</h4>
+                  <p>Verde, amarelo, azul e branco em combinações únicas</p>
+                </div>
+              </div>
+              
+              <div class="colecao-cta">
+                <p class="cta-text">Encomende sua peça exclusiva para a Copa!</p>
+                <a href="https://bit.ly/4rgrule" target="_blank" class="btn-colecao">
+                  <span>Fazer Encomenda</span>
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+            
+            <div class="colecao-visual">
+              <div class="pecas-grid">
+                <div class="peca-card" onclick="abrirModal('top-genipabu')">
+                  <img src="img/coleções/made-in-brasil/Top-Genipabu.jpeg" alt="Top Genipabu">
+                  <div class="peca-info">
+                    <h4>Top Genipabu</h4>
+                  </div>
+                </div>
+                <div class="peca-card" onclick="abrirModal('shortinho-hexa')">
+                  <img src="img/coleções/made-in-brasil/Shortinho-Hexa.jpeg" alt="Shortinho Hexa">
+                  <div class="peca-info">
+                    <h4>Shortinho Hexa</h4>
+                  </div>
+                </div>
+                <div class="peca-card" onclick="abrirModal('saia-dona-maria')">
+                  <img src="img/coleções/made-in-brasil/Saia-Dona-Maria.jpeg" alt="Saia Dona Maria">
+                  <div class="peca-info">
+                    <h4>Saia Dona Maria</h4>
+                  </div>
+                </div>
+                <div class="peca-card" onclick="abrirModal('bandana-xodo')">
+                  <img src="img/coleções/made-in-brasil/Bandana-Xodó.jpeg" alt="Bandana Xodó">
+                  <div class="peca-info">
+                    <h4>Bandana Xodó</h4>
+                  </div>
+                </div>
+                <div class="peca-card" onclick="abrirModal('faixa-caju')">
+                  <img src="img/coleções/made-in-brasil/Faixa-Caju.jpeg" alt="Faixa Caju">
+                  <div class="peca-info">
+                    <h4>Faixa Caju</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="colecao-note">
+                <i class="fas fa-info-circle"></i>
+                <p>Todas as peças são feitas sob encomenda com suas medidas e preferências</p>
               </div>
             </div>
           </div>
@@ -274,6 +370,31 @@
       </div>
     </div>
   </footer>
+
+  <!-- Modal de Detalhes da Peça -->
+  <div id="modal-peca" class="modal" onclick="fecharModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="fecharModal()">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="modal-body">
+        <div class="modal-image">
+          <img id="modal-img" src="" alt="">
+        </div>
+        <div class="modal-info">
+          <h3 id="modal-titulo"></h3>
+          <div class="modal-precos">
+            <h4>Tamanhos e Preços</h4>
+            <div id="modal-tabela-precos" class="tabela-precos"></div>
+          </div>
+          <a href="https://bit.ly/4rgrule" target="_blank" class="btn-encomendar">
+            <i class="fab fa-whatsapp"></i>
+            <span>Encomendar pelo WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Elementos decorativos -->
   <div class="floating-elements">
